@@ -1,6 +1,5 @@
-"use client";
+/* Icons — preview port of components/icons.js */
 
-/* ---------- Shared stroke-based icons ---------- */
 const strokeProps = {
   fill: "none",
   stroke: "currentColor",
@@ -10,7 +9,7 @@ const strokeProps = {
   "aria-hidden": true,
 };
 
-export function ArrowUpRight({ className = "h-5 w-5" }) {
+function ArrowUpRight({ className = "h-5 w-5" }) {
   return (
     <svg className={className} viewBox="0 0 24 24" {...strokeProps} strokeWidth={2}>
       <path d="M7 17L17 7" />
@@ -18,16 +17,14 @@ export function ArrowUpRight({ className = "h-5 w-5" }) {
     </svg>
   );
 }
-
-export function Play({ className = "h-4 w-4" }) {
+function Play({ className = "h-4 w-4" }) {
   return (
     <svg className={className} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
       <polygon points="6 4 20 12 6 20 6 4" />
     </svg>
   );
 }
-
-export function ClockIcon({ className = "h-7 w-7" }) {
+function ClockIcon({ className = "h-7 w-7" }) {
   return (
     <svg className={className} viewBox="0 0 24 24" {...strokeProps}>
       <circle cx="12" cy="12" r="9" />
@@ -35,8 +32,7 @@ export function ClockIcon({ className = "h-7 w-7" }) {
     </svg>
   );
 }
-
-export function GlobeIcon({ className = "h-7 w-7" }) {
+function GlobeIcon({ className = "h-7 w-7" }) {
   return (
     <svg className={className} viewBox="0 0 24 24" {...strokeProps}>
       <circle cx="12" cy="12" r="9" />
@@ -46,35 +42,28 @@ export function GlobeIcon({ className = "h-7 w-7" }) {
     </svg>
   );
 }
-
-/* ---------- Material-style filled icons for feature/bento cards ---------- */
-export function MaterialImageIcon({ className = "h-6 w-6" }) {
-  // Repurposed as "Smart Schema" — preserved for backward compat
+function MaterialImageIcon({ className = "h-6 w-6" }) {
   return (
     <svg className={className} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
       <path d="M5 21q-.825 0-1.412-.587T3 19V5q0-.825.588-1.412T5 3h14q.825 0 1.413.588T21 5v14q0 .825-.587 1.413T19 21H5Zm1-4h12l-3.75-5-3 4L9 13l-3 4Z" />
     </svg>
   );
 }
-
-export function MaterialMovieIcon({ className = "h-6 w-6" }) {
+function MaterialMovieIcon({ className = "h-6 w-6" }) {
   return (
     <svg className={className} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
       <path d="M4 6.47 5.76 10H20v8H4V6.47M22 4h-4l2 4h-3l-2-4h-2l2 4h-3l-2-4H8l2 4H7L5 4H4c-1.1 0-1.99.89-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V4Z" />
     </svg>
   );
 }
-
-export function MaterialLightbulbIcon({ className = "h-6 w-6" }) {
+function MaterialLightbulbIcon({ className = "h-6 w-6" }) {
   return (
     <svg className={className} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
       <path d="M9 21c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-1H9v1Zm3-19C8.14 2 5 5.14 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.86-3.14-7-7-7Z" />
     </svg>
   );
 }
-
-/* ---------- Stroke icons for new sections ---------- */
-export function PipelineIcon({ className = "h-6 w-6" }) {
+function PipelineIcon({ className = "h-6 w-6" }) {
   return (
     <svg className={className} viewBox="0 0 24 24" {...strokeProps}>
       <rect x="2" y="9" width="6" height="6" rx="1.5" />
@@ -85,8 +74,7 @@ export function PipelineIcon({ className = "h-6 w-6" }) {
     </svg>
   );
 }
-
-export function ShieldIcon({ className = "h-6 w-6" }) {
+function ShieldIcon({ className = "h-6 w-6" }) {
   return (
     <svg className={className} viewBox="0 0 24 24" {...strokeProps}>
       <path d="M12 3l8 3v6c0 5-3.5 8.5-8 9-4.5-.5-8-4-8-9V6l8-3z" />
@@ -94,8 +82,7 @@ export function ShieldIcon({ className = "h-6 w-6" }) {
     </svg>
   );
 }
-
-export function SparkIcon({ className = "h-6 w-6" }) {
+function SparkIcon({ className = "h-6 w-6" }) {
   return (
     <svg className={className} viewBox="0 0 24 24" {...strokeProps}>
       <path d="M12 3l1.8 4.2L18 9l-4.2 1.8L12 15l-1.8-4.2L6 9l4.2-1.8L12 3z" />
@@ -103,8 +90,7 @@ export function SparkIcon({ className = "h-6 w-6" }) {
     </svg>
   );
 }
-
-export function GearIcon({ className = "h-6 w-6" }) {
+function GearIcon({ className = "h-6 w-6" }) {
   return (
     <svg className={className} viewBox="0 0 24 24" {...strokeProps}>
       <circle cx="12" cy="12" r="3" />
@@ -112,8 +98,7 @@ export function GearIcon({ className = "h-6 w-6" }) {
     </svg>
   );
 }
-
-export function GraphIcon({ className = "h-6 w-6" }) {
+function GraphIcon({ className = "h-6 w-6" }) {
   return (
     <svg className={className} viewBox="0 0 24 24" {...strokeProps}>
       <path d="M3 20h18" />
@@ -124,8 +109,7 @@ export function GraphIcon({ className = "h-6 w-6" }) {
     </svg>
   );
 }
-
-export function ConnectIcon({ className = "h-6 w-6" }) {
+function ConnectIcon({ className = "h-6 w-6" }) {
   return (
     <svg className={className} viewBox="0 0 24 24" {...strokeProps}>
       <circle cx="5" cy="6" r="2" />
@@ -136,19 +120,24 @@ export function ConnectIcon({ className = "h-6 w-6" }) {
     </svg>
   );
 }
-
-export function CheckIcon({ className = "h-4 w-4" }) {
+function CheckIcon({ className = "h-4 w-4" }) {
   return (
     <svg className={className} viewBox="0 0 24 24" {...strokeProps} strokeWidth={2}>
       <path d="M5 12l4 4L19 7" />
     </svg>
   );
 }
-
-export function ChevronDownIcon({ className = "h-4 w-4" }) {
+function ChevronDownIcon({ className = "h-4 w-4" }) {
   return (
     <svg className={className} viewBox="0 0 24 24" {...strokeProps} strokeWidth={2}>
       <path d="M6 9l6 6 6-6" />
     </svg>
   );
 }
+
+Object.assign(window, {
+  ArrowUpRight, Play, ClockIcon, GlobeIcon,
+  MaterialImageIcon, MaterialMovieIcon, MaterialLightbulbIcon,
+  PipelineIcon, ShieldIcon, SparkIcon, GearIcon, GraphIcon, ConnectIcon,
+  CheckIcon, ChevronDownIcon,
+});

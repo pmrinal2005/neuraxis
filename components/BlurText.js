@@ -4,8 +4,6 @@ import { useEffect, useRef, useState } from "react";
 
 /**
  * BlurText — word-by-word blur-in, IntersectionObserver-triggered.
- * Replaces Framer Motion implementation with CSS keyframes + staggered
- * animation-delay per word. See globals.css `@keyframes wordBlur`.
  */
 export default function BlurText({
   text,

@@ -2,38 +2,48 @@
 
 import { ArrowUpRight } from "./icons";
 
-const NAV_LINKS = ["Home", "Voyages", "Worlds", "Innovation", "Plan Launch"];
+const NAV_LINKS = [
+  { label: "Platform", href: "#platform" },
+  { label: "Features", href: "#features" },
+  { label: "Pricing", href: "#pricing" },
+  { label: "Workflow", href: "#workflow" },
+  { label: "Docs", href: "#faq" },
+];
 
 export default function Navbar() {
   return (
-    <nav className="fixed top-4 left-0 right-0 z-50 px-8 lg:px-16">
+    <nav className="fixed top-4 left-0 right-0 z-50 px-8 lg:px-16" aria-label="Primary">
       <div className="flex items-center justify-between">
         {/* Logo */}
-        <div className="liquid-glass w-12 h-12 flex items-center justify-center">
+        <a
+          href="#"
+          className="liquid-glass w-12 h-12 flex items-center justify-center"
+          aria-label="Neuraxis home"
+        >
           <span
             className="font-heading italic text-white text-2xl leading-none"
             style={{ marginTop: "-2px" }}
           >
-            a
+            n
           </span>
-        </div>
+        </a>
 
         {/* Center pill — desktop only */}
         <div className="hidden md:flex liquid-glass items-center px-1.5 py-1.5 gap-1">
-          {NAV_LINKS.map((label) => (
+          {NAV_LINKS.map(({ label, href }) => (
             <a
               key={label}
-              href="#"
+              href={href}
               className="px-3 py-2 text-sm font-medium text-white/90 font-body hover:text-white"
             >
               {label}
             </a>
           ))}
           <a
-            href="#"
+            href="#pricing"
             className="ml-1 inline-flex items-center gap-1 bg-white text-black rounded-full px-4 py-2 text-sm font-medium whitespace-nowrap"
           >
-            Claim a Spot
+            Request Access
             <ArrowUpRight className="h-4 w-4" />
           </a>
         </div>

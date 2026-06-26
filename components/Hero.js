@@ -12,7 +12,11 @@ const PARTNERS = ["Aeon", "Vela", "Apex", "Orbit", "Zeno"];
 
 export default function Hero() {
   return (
-    <section className="relative w-full h-screen min-h-[760px] bg-black overflow-hidden">
+    <section
+      id="platform"
+      className="relative w-full h-screen min-h-[760px] bg-black overflow-hidden"
+      aria-label="Hero"
+    >
       {/* Background video — 120% scale, top-aligned */}
       <FadingVideo
         src={HERO_VIDEO}
@@ -32,18 +36,18 @@ export default function Hero() {
             style={{ animationDelay: "0.4s" }}
           >
             <span className="bg-white text-black rounded-full px-3 py-1 text-xs font-semibold">
-              New
+              v3.0
             </span>
             <span className="text-sm text-white/90 font-body">
-              Maiden Crewed Voyage to Mars Arrives 2026
+              Adaptive AI Pipelines — Now Generally Available
             </span>
           </div>
 
           {/* Headline (BlurText word-by-word) */}
           <div className="mt-6">
             <BlurText
-              text="Venture Past Our Sky Across the Universe"
-              className="text-6xl md:text-7xl lg:text-[5.5rem] font-heading italic text-white leading-[0.8] max-w-2xl tracking-[-4px]"
+              text="Automate Every Decision Your Data Demands"
+              className="text-6xl md:text-7xl lg:text-[5.5rem] font-heading italic text-white leading-[0.8] max-w-3xl tracking-[-4px]"
             />
           </div>
 
@@ -52,9 +56,9 @@ export default function Hero() {
             className="anim-blur-up mt-4 text-sm md:text-base text-white max-w-2xl font-body font-light leading-tight"
             style={{ animationDelay: "0.8s" }}
           >
-            Discover the universe in ways once unimaginable. Our pioneering
-            vessels and breakthrough engineering bring deep-space exploration
-            within reach—secure and extraordinary.
+            Neuraxis is the AI-driven data automation platform that ingests,
+            transforms, and routes enterprise data through self-tuning pipelines —
+            engineered for governance, observability, and scale.
           </p>
 
           {/* CTAs */}
@@ -63,17 +67,17 @@ export default function Hero() {
             style={{ animationDelay: "1.1s" }}
           >
             <a
-              href="#"
+              href="#pricing"
               className="liquid-glass-strong rounded-full px-5 py-2.5 text-sm font-medium text-white inline-flex items-center gap-2"
             >
-              Start Your Voyage
+              Start Free Trial
               <ArrowUpRight className="h-5 w-5" />
             </a>
             <a
-              href="#"
+              href="#features"
               className="inline-flex items-center gap-2 text-sm font-medium text-white"
             >
-              View Liftoff
+              Watch Platform Tour
               <Play className="h-4 w-4" />
             </a>
           </div>
@@ -86,10 +90,10 @@ export default function Hero() {
             <div className="liquid-glass p-5 w-[220px] rounded-[1.25rem] text-left">
               <ClockIcon className="h-7 w-7 text-white" />
               <div className="mt-4 text-4xl font-heading italic text-white tracking-[-1px] leading-none">
-                34.5 Min
+                94 ms
               </div>
               <div className="text-xs text-white font-body font-light mt-2">
-                Average Videos Watch Time
+                Median Pipeline Latency
               </div>
             </div>
             <div className="liquid-glass p-5 w-[220px] rounded-[1.25rem] text-left">
@@ -98,7 +102,7 @@ export default function Hero() {
                 2.8B+
               </div>
               <div className="text-xs text-white font-body font-light mt-2">
-                Users Across the Globe
+                Events Orchestrated Daily
               </div>
             </div>
           </div>
@@ -110,7 +114,7 @@ export default function Hero() {
           style={{ animationDelay: "1.4s" }}
         >
           <div className="liquid-glass rounded-full px-3.5 py-1 text-xs font-medium text-white">
-            Collaborating with top aerospace pioneers globally
+            Trusted by data teams at category-defining companies
           </div>
           <div className="flex items-center justify-center flex-wrap gap-12 md:gap-16">
             {PARTNERS.map((name) => (

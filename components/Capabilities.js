@@ -13,30 +13,34 @@ const CAPS_VIDEO =
 const CARDS = [
   {
     Icon: MaterialImageIcon,
-    tags: ["Natural Context", "Photo Realism", "Infinite Settings", "Eco-Vibe"],
-    title: "AI Scenery",
+    tags: ["Schema Drift", "Auto-Heal", "200+ Connectors", "Zero-Config"],
+    title: "Adaptive Ingest",
     body:
-      "AI analyzes your product to create indistinguishable natural environments — from Icelandic cliffs to misty forests.",
+      "Pipelines learn your sources and self-correct on schema drift — Postgres, Kafka, Snowflake, Stripe, anything you throw at them.",
   },
   {
     Icon: MaterialMovieIcon,
-    tags: ["Scale Fast", "Visual Consistency", "Time Saver", "Ready to Post"],
-    title: "Batch Production",
+    tags: ["Parallel Compute", "Cost-Aware", "Event Replay", "Lineage"],
+    title: "Stream Orchestration",
     body:
-      "Style your entire product line in minutes. Create a unified visual identity for catalogues and social media without weeks of retouching.",
+      "Run thousands of transforms in parallel with full lineage and replay. Backfills, branching, and audit trails come standard.",
   },
   {
     Icon: MaterialLightbulbIcon,
-    tags: ["Ray Tracing", "Physical Shadows", "Studio Quality", "Sunlight Sync"],
-    title: "Smart Lighting",
+    tags: ["LLM Routing", "Prompt Cache", "Eval Suite", "Guardrails"],
+    title: "Intelligent Routing",
     body:
-      "Automatic lighting and material adjustment. Achieve flawless integration with realistic shadows and sunlight.",
+      "Route every record to the right model, transform, or destination — with policy controls, cost ceilings, and live evaluation.",
   },
 ];
 
 export default function Capabilities() {
   return (
-    <section className="relative min-h-screen w-full bg-black overflow-hidden">
+    <section
+      id="features"
+      className="relative min-h-screen w-full bg-black overflow-hidden"
+      aria-label="Platform capabilities"
+    >
       <FadingVideo
         src={CAPS_VIDEO}
         className="absolute inset-0 w-full h-full object-cover z-0"
@@ -49,7 +53,7 @@ export default function Capabilities() {
             // Capabilities
           </div>
           <h2 className="font-heading italic text-white text-6xl md:text-7xl lg:text-[6rem] leading-[0.9] tracking-[-3px]">
-            Production
+            Automation
             <br />
             evolved
           </h2>
